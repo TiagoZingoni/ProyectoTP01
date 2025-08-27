@@ -6,7 +6,7 @@ public class main {
 
     public static void main(String[] args) {
         Animales animales = new Animales(); //Crea la cola animales
-        GestorVeterinario gestor = new GestorVeterinario();
-        gestor.IniciarVeterinarios(animales);
+        GestorVeterinario gestor = new GestorVeterinario(); //Crea los veterinarios
+        gestor.IniciarVeterinarios(animales); //Inicia los veterinarios
     }
 }
