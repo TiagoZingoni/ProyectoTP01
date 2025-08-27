@@ -1,6 +1,11 @@
+package ExecutorRunnable;
+
+import Auxiliares.Cola;
 import Strategy.*;
 //Cada veterinario es cliente del context que crean
-public class Veterinario implements Runnable{
+
+public class Veterinario implements Runnable {
+
     String name;
     Cola colaAnimales; //Recurso compartido
 
@@ -17,20 +22,20 @@ public class Veterinario implements Runnable{
     TratamientoLeon tLeon = new TratamientoLeon();
 
     Context context = new Context();
+
     /*Cada veterinario tiene un context en el que cambian de tratamiento 
     según quien llega.*/
-    
-    public Veterinario(String nombre, Animales animales){
+    public Veterinario(String nombre, Animales animales) {
         this.name = nombre; //Nombre del veterinario
         this.colaAnimales = animales.getCola(); //Objeto compartido
     }
-    
+
     @Override
     public void run() {
-        while(!colaAnimales.esVacia()){
+        while (!colaAnimales.esVacia()) {
             Object animal = colaAnimales.obtenerFrente(); //Se obtiene al animal de la cola.
             colaAnimales.sacar(); //Saca el animal de la cola.
-            switch(animal.toString()){
+            switch (animal.toString()) {
                 case "1":
                     context.setStrategy(tPerro);
                     context.ejecutarStrategy();
@@ -75,4 +80,3 @@ public class Veterinario implements Runnable{
         }
     }
 }
-

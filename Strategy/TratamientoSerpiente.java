@@ -1,5 +1,7 @@
 package Strategy;
+
 public class TratamientoSerpiente implements InterfazStrategy {
+
     public void detallesDelTratamiento() {
         int random = (int) (Math.random() * 10);
         System.out.println("Comienza el tratamiento de la Serpiente");
@@ -43,9 +45,9 @@ public class TratamientoSerpiente implements InterfazStrategy {
                 System.err.println("Se rompió todo");
             }
         } else {
-            System.out.println("\u001B[31mLa Serpiente picó al ayudante\u001B[0m");
-            System.out.println("\u001B[31mNo es venosa, ambos sobreviven\u001B[0m");
-            
+            System.out.println("\u001B[32mLa Serpiente picó al ayudante\u001B[0m");
+            System.out.println("\u001B[32mNo es venosa, ambos sobreviven\u001B[0m");
+
             try {
                 Thread.sleep(2000);
             } catch (InterruptedException e) {
