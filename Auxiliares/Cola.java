@@ -27,9 +27,9 @@ public class Cola {
         return true;
     }
 
-    public boolean sacar() {
-        //elimina el primer elemento de la cola
+    public synchronized boolean sacar() {
         boolean exito = true;
+        //elimina el primer elemento de la cola
         if (this.frente == null) //reporta error ya que la cola está vacía
         {
             exito = false;
@@ -40,13 +40,14 @@ public class Cola {
             }
         }
         return exito;
+
     }
 
-    public Object obtenerFrente() {
+    public synchronized Object obtenerFrente() {
         return frente.getElemento();
     }
 
-    public boolean esVacia() {
+    public synchronized boolean esVacia() {
         return (frente == null);
     }
 
