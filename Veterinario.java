@@ -27,51 +27,52 @@ public class Veterinario implements Runnable{
     
     @Override
     public void run() {
-        Object animal = colaAnimales.obtenerFrente(); //Se obtiene al animal de la cola.
-        colaAnimales.sacar(); //Saca el animal de la cola.
-        switch(animal.toString()){
-            case "1":
-                context.setStrategy(tPerro);
-                context.ejecutarStrategy();
-                break;
-            case "2":
-                context.setStrategy(tGato);
-                context.ejecutarStrategy();
-                break;
-            case "3":
-                context.setStrategy(tTucan);
-                context.ejecutarStrategy();
-                break;
-            case "4":
-                context.setStrategy(tTiburon);
-                context.ejecutarStrategy();
-                break;
-            case "5":
-                context.setStrategy(tHipopotamo);
-                context.ejecutarStrategy();
-                break;
-            case "6":
-                context.setStrategy(tAlacran);
-                context.ejecutarStrategy();
-                break;
-            case "7":
-                context.setStrategy(tJirafa);
-                context.ejecutarStrategy();
-                break;
-            case "8":
-                context.setStrategy(tElefante);
-                context.ejecutarStrategy();
-                break;
-            case "9":
-                context.setStrategy(tSerpiente);
-                context.ejecutarStrategy();
-                break;
-            case "10":
-                context.setStrategy(tLeon);
-                context.ejecutarStrategy();
-                break;
+        while(!colaAnimales.esVacia()){
+            Object animal = colaAnimales.obtenerFrente(); //Se obtiene al animal de la cola.
+            colaAnimales.sacar(); //Saca el animal de la cola.
+            switch(animal.toString()){
+                case "1":
+                    context.setStrategy(tPerro);
+                    context.ejecutarStrategy();
+                    break;
+                case "2":
+                    context.setStrategy(tGato);
+                    context.ejecutarStrategy();
+                    break;
+                case "3":
+                    context.setStrategy(tTucan);
+                    context.ejecutarStrategy();
+                    break;
+                case "4":
+                    context.setStrategy(tTiburon);
+                    context.ejecutarStrategy();
+                    break;
+                case "5":
+                    context.setStrategy(tHipopotamo);
+                    context.ejecutarStrategy();
+                    break;
+                case "6":
+                    context.setStrategy(tAlacran);
+                    context.ejecutarStrategy();
+                    break;
+                case "7":
+                    context.setStrategy(tJirafa);
+                    context.ejecutarStrategy();
+                    break;
+                case "8":
+                    context.setStrategy(tElefante);
+                    context.ejecutarStrategy();
+                    break;
+                case "9":
+                    context.setStrategy(tSerpiente);
+                    context.ejecutarStrategy();
+                    break;
+                case "10":
+                    context.setStrategy(tLeon);
+                    context.ejecutarStrategy();
+                    break;
+            }
         }
-
     }
 }
 
