@@ -10,6 +10,7 @@ public class Veterinario implements Runnable {
     Cola colaAnimales; //Recurso compartido
 
     //Cada veterinario tiene cada estrategia
+    //Consultar si está bien tener creados los tratamientos en variables o si se deben crear cada vez que se usan.
     TratamientoPerro tPerro = new TratamientoPerro();
     TratamientoGato tGato = new TratamientoGato();
     TratamientoTucan tTucan = new TratamientoTucan();
