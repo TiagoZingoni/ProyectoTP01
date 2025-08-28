@@ -4,6 +4,12 @@ package Strategy;
 public class TratamientoAlacran implements InterfazStrategy {
 
     public void detallesDelTratamiento() {
+        /*
+         * Se comienza a ejecutar una simulación de lo que podría hacer el tratamiento en cuestión
+         * imprimiendo mensajes por consola cada determinado tiempo. Al terminar, para determinar 
+         * una conclusión del tratamiento, hicimos que por medio de un numero aleatorio se elija 
+         * un mensaje en concreto por consola. 
+         */
         int random = (int) (Math.random() * 10);
         System.out.println("Comienza el tratamiento del Alacrán");
         try {

@@ -35,7 +35,7 @@ public class Veterinario implements Runnable {
         while (!colaAnimales.esVacia()) {
             Object animal = colaAnimales.obtenerFrente(); //Se obtiene al animal de la cola.
             colaAnimales.sacar(); //Saca el animal de la cola.
-            switch (animal.toString()) {
+            switch (animal.toString()) {//Se determina el tratamiento a usar en base al animal obtenido
                 case "1":
                     context.setStrategy(tPerro);
                     context.ejecutarStrategy();

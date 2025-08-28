@@ -4,7 +4,6 @@ import Auxiliares.*;
 
 public class Animales {
     //Crea una cola de animales, esta es el recurso compartido entre veterinarios.
-
     Cola colaAnimales = new Cola();
 
     public Animales() {
