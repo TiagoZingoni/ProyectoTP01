@@ -75,14 +75,13 @@ public class Cola {
     public synchronized Object obtenerEliminarObjeto() {
         Object objeto = null;
         //elimina el primer elemento de la cola
-        if (this.frente != null) //reporta error ya que la cola está vacía
-        {
+        if (this.frente != null) {
             objeto = frente.getElemento(); //guardo el primer objeto de la cola
             this.frente = this.frente.getEnlace();
             if (this.frente == null) {
                 this.fin = null;
             }
         }
-        return objeto;
+        return objeto;//retorno el objeto o null si vacía
     }
 }
