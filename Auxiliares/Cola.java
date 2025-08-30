@@ -43,11 +43,11 @@ public class Cola {
 
     }
 
-    public synchronized Object obtenerFrente() {
+    public Object obtenerFrente() {
         return frente.getElemento();
     }
 
-    public synchronized boolean esVacia() {
+    public boolean esVacia() {
         return (frente == null);
     }
 
@@ -69,5 +69,20 @@ public class Cola {
             cloneAux(nodAux.getEnlace(), colaClon);
         }
         return colaClon;
+    }
+
+    //metodo para la clase Veterinario
+    public synchronized Object obtenerEliminarObjeto() {
+        Object objeto = null;
+        //elimina el primer elemento de la cola
+        if (this.frente != null) //reporta error ya que la cola está vacía
+        {
+            objeto = frente.getElemento(); //guardo el primer objeto de la cola
+            this.frente = this.frente.getEnlace();
+            if (this.frente == null) {
+                this.fin = null;
+            }
+        }
+        return objeto;
     }
 }

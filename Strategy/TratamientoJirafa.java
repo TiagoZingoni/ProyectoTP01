@@ -1,7 +1,8 @@
 package Strategy;
-public class TratamientoJirafa implements InterfazStrategy {  
 
-     public void detallesDelTratamiento() {
+public class TratamientoJirafa implements InterfazStrategy {
+
+    public void detallesDelTratamiento() {
         /*
          * Se comienza a ejecutar una simulación de lo que podría hacer el tratamiento en cuestión
          * imprimiendo mensajes por consola cada determinado tiempo. Al terminar, para determinar 
